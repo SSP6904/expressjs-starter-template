@@ -32,11 +32,11 @@ npm run dev # starts the server using nodemon
 
 > Q: I want to use HTML files with this. What can I do to make this happen?
 >
-> A: Just add any HTML files into the `public` folder. This folder is located in the root directory of this template. You do not have to add the `static` route to the app.js file as it's already added for you.
+> A: Just add any HTML files into the `public` folder. Make sure that you have created the public folder within the root directory.
 
 > Q: Can I use view engines with this?
 >
-> A: Yes you can. View engines such as EJS or HBS are the best out there but you may other engines if you want.
+> A: Yes you can. View engines such as EJS or HBS are the best out there but you may use other engines if you want. Make sure you create the `views` folder in the root directory and then add all of your template files there.
 
 > Q: Where do I find some reference on using ExpressJS?
 >
@@ -44,7 +44,7 @@ npm run dev # starts the server using nodemon
 
 > Q: How can I add routes like a about page to my server?
 >
-> A: To add a route, use the following code below. You may change it if you like.
+> A: To add a route, here's an route example that you can use..
 > ```javascript
 > app.get('/about', function(req, res) {
 >   res.send('This is your about page!')
