@@ -51,5 +51,14 @@ npm run dev # starts the server using nodemon
 > })
 > ```
 
+> Q: Is there other types of responses like JSON included that I can use?
+>
+> A: Yes there is. If you wanted to have your route responded as a JSON, here's a route example that might help you out. Check the documentation site for more response types if you want to learn more about them.
+> ```javascript
+> app.get('/json', function(req, res) {
+>   res.json({"status": 200, "message": "Hello world! This is a JSON response!"})
+> })
+> ```
+
 ## Questions or issues
 If have any questions or want to file an issue on something about this template, please do so using the GitHub issue system. Note that I might not respond in time, so you should wait till I'm available to help you out.
