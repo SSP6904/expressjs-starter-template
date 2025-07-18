@@ -21,11 +21,11 @@ If you want, you may run the server in development mode. This can done using the
 npm run dev # starts the server using nodemon
 ```
 
-> **Note**
+> [!NOTE]
 >
 > Nodemon can be used if you are running the server in a development environment. This can be useful if you are making a change to your server without having to rerun the server every time you change something in any part of the code. If you need more information on what nodemon can be used for, check the documentation website [here](https://nodemon.io/) to learn more. I don't recommend that you use this mode for your production build.
 
-## Questions you might have reguarding this template
+## Questions you might have regarding this template
 
 > Q: The server port in the app.js file is in use. What can I do to fix this?
 >
@@ -36,7 +36,7 @@ npm run dev # starts the server using nodemon
 
 > Q: I want to use HTML files with this. What can I do to make this happen?
 >
-> A: Just add any HTML files into the `public` folder. Make sure that you have created the public folder within the root directory. You can also add other static files such as a style sheet or a javascript file if you want.
+> A: Just add any HTML files into the `public` folder. Make sure that you have created the public folder within the root directory. You can also add other static files such as a style sheet or a JavaScript file if you want.
 
 > Q: Can I use view engines with this?
 >
@@ -54,7 +54,7 @@ npm run dev # starts the server using nodemon
 >   res.send('This is your about page!')
 > })
 > ```
-> There's a file included with this template that you can use to orgainize your routes.
+> There's a file included with this template that you can use to organize your routes.
 
 > Q: Is there other types of responses included with Express like JSON that I can use?
 >
@@ -67,7 +67,7 @@ npm run dev # starts the server using nodemon
 
 > Q: Can I use a database server such as SQLite or MySQL with this?
 >
-> A: Yes you can. You can use any database server with it, as long if their is an npm package for what ever you're using. I recommend using [sequelize](https://sequelize.org/) because it's very easy to setup and can use any database server it's compatible with. When you setup your database connection settings, make sure you have them set in your environment file so that other users won't be able to hack into your database server and change what you have in it. Note that the enviroment file is ignored when pushing your changes, so you shouldn't have to worry about it being public to anyone who looks at your source code.
+> A: Yes you can. You can use any database server with it, as long if their is an npm package for what ever you're using. I recommend using [sequelize](https://sequelize.org/) because it's very easy to setup and can use any database server it's compatible with. When you setup your database connection settings, make sure you have them set in your environment file so that other users won't be able to hack into your database server and change what you have in it. Note that the environment file is ignored when pushing your changes, so you shouldn't have to worry about it being public to anyone who looks at your source code.
 
 ## Questions or issues
 If have any questions or want to file an issue on something about this template, please do so using the GitHub issue system. Note that I might not respond in time, so you should wait till I'm available to help you out. You can also fork this template and create a pull request with your own custom changes.
