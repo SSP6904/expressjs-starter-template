@@ -28,7 +28,7 @@ app.listen(port, function() {
         console.log(`Started the express server! Click on the link below to see it in your browser!`)
         console.log(`http://localhost:${port}`)
     } catch(error) {
-        console.log(error)
-        console.log(`An unknown error has occurred! Check the console log to see what's wrong!`)
+        const message = error instanceof Error ? error.message : 'An unknown error has occurred!'
+        console.error(message)
     }
 })
