@@ -7,7 +7,10 @@ To use this template, you should have the following installed on your computer o
 - NodeJS and NPM (latest version is recommended)
 - Docker and Docker compose (optional if you want to use it in a docker container)
 
-### Installing and running the server
+## Building and running
+There's a few ways that you can run the server, by running it in a Docker Container, or the standalone method.
+
+### Standalone method
 Run these commands to install the packages and run the server.
 
 ```bash
@@ -15,15 +18,42 @@ npm install # install the needed packages
 npm start # start the server
 ```
 
-If you want, you may run the server in development mode. This can done using the command below.
-
-```bash
-npm run dev # starts the server using nodemon
-```
-
 > [!NOTE]
 >
-> Nodemon can be used if you are running the server in a development environment. This can be useful if you are making a change to your server without having to rerun the server every time you change something in any part of the code. If you need more information on what nodemon can be used for, check the documentation website [here](https://nodemon.io/) to learn more. I don't recommend that you use this mode for your production build.
+> If you want, you may run the server in development mode. This can done using the command below.
+> ```bash
+> npm run dev # starts the server using nodemon
+> ```
+>
+> Nodemon can be used if you are running the server in a development environment. This can be useful if you are making a change to your server without having to rerun the server every time you change something in any part of the code.
+>
+> If you need more information on what nodemon can be used for, check the documentation website [here](https://nodemon.io/) to learn more. I don't recommend that you use this mode for your production build.
+
+### Docker method
+Before you begin to use the docker method, you need to have both the Docker daemon and the compose plugin installed in order to run the server effectively.
+
+You need to build the Docker image before you run the server. You can use one of these commands below if you are using the compose plugin or not (see below).
+
+```bash
+# You may need to include the sudo command if docker requires it!
+docker build -t express_server:latest # Compose method
+docker compose build # Standalone method
+```
+
+Now you are all set to start the server! Run the command below to start it up!
+
+```bash
+# You can exclude the argument at the end if you want to watch for any errors!
+docker compose up -d
+```
+
+If you want to run the container without the compose plugin, you can use the command below to do that!
+
+```bash
+# You may need to change the port number if the one that is included is in use by the system!
+# You can exclude the '-d' argument at the start if you want to watch for any errors!
+docker run -d --name express_server -p 8000:8000 -e PORT=8000 express_server:latest
+```
 
 ## Questions you might have regarding this template
 
@@ -61,7 +91,7 @@ npm run dev # starts the server using nodemon
 > A: Yes there is. If you wanted to have your route responded as a JSON, here's a route example that might help you out. Check the documentation site for more response types if you want to learn more about them.
 > ```javascript
 > app.get('/json', function(req, res) {
->   res.json({"status": 200, "message": "Hello world! This is a JSON response!"})
+>   res.json({status: 200, message: "Hello world! This is a JSON response!"})
 > })
 > ```
 
@@ -73,5 +103,5 @@ npm run dev # starts the server using nodemon
 If have any questions or want to file an issue on something about this template, please do so using the GitHub issue system. Note that I might not respond in time, so you should wait till I'm available to help you out. You can also fork this template and create a pull request with your own custom changes.
 
 ## To-do
-- [ ] Add instructions for using docker with this
-- [ ] Add the files needed for using docker with this
+- [x] Add instructions for using docker with this
+- [x] Add the files needed for using docker with this

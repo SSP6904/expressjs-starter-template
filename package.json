@@ -2,11 +2,15 @@
   "name": "expressjs-starter-template",
   "version": "1.0.0",
   "description": "Quick starter template on using ExpressJS",
-  "main": "server.cjs",
+  "main": "index.mjs",
+  "type": "module",
+  "nodemonConfig": {
+    "ignore": ["public/*"]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.cjs",
-    "dev": "nodemon server.cjs"
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs"
   },
   "keywords": [],
   "author": "",

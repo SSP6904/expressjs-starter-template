@@ -1,0 +1,11 @@
+services:
+  express_server:
+    image: express_server:latest
+    restart: always
+    ports:
+      - "8000:8000" # You may need to change the port number if the one that is included is in use by the system!
+    environment:
+      - NODE_ENV=production
+      - PORT=8000 # You may need to change the port number if the one that is included is in use by the system!
+    build:
+      context: ./
